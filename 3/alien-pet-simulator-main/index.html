@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Pet Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #petDisplay {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: #cce7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* Hide anything outside the bounds of this element */
+        }
+
+        #alienImage {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            /* Optional, for additional rounding at the image edges */
+            object-fit: cover;
+            /* Ensure image aspect ratio is preserved */
+        }
+
+        button {
+            background-color: #2ecc71;
+            /* Green background */
+            border: none;
+            color: white;
+            /* White text */
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            /* Rounded corners */
+            transition: background-color 0.3s, transform 0.3s;
+            /* Smooth color change and grow effect */
+        }
+
+        button:hover {
+            background-color: #27ae60;
+            /* Darker green on hover */
+            transform: scale(1.05);
+            /* Slightly larger on hover */
+        }
+
+        button:active {
+            background-color: #1abc9c;
+            /* Change color on click */
+            transform: scale(1);
+            /* Reset size on click */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Alien Pet Simulator</h1>
+    <div id="petDisplay">
+        <img id="alienImage" src="" alt="Alien Image">
+    </div>
+    <div>
+        <strong>Mood:</strong> <span id="mood">50</span> <br>
+        <strong>Hunger:</strong> <span id="hunger">50</span> <br>
+        <strong>Planet of Origin:</strong> <span id="planetOrigin">Mars</span> <br>
+        <strong>Special Ability:</strong> <span id="specialAbility">Invisibility</span> <br>
+        <strong>Sleep Status:</strong> <span id="sleepStatus"></span>
+    </div>
+    <div>
+        <button onclick="handleAction('Feed')">Feed</button>
+        <button onclick="handleAction('Play')">Play</button>
+        <button onclick="handleAction('Use Special Ability')">Use Special Ability</button>
+        <button onclick="handleAction('Send to Sleep')">Send to Sleep</button>
+        <button onclick="handleAction('Wake Up')">Wake Up</button>
+    </div>
+    <div id="messageBox" style="margin-top: 20px; color: red;"></div>
+    <script src="index.js"></script>
+</body>
+
+</html>

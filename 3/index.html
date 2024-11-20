@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Activity Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+    <div class="flex items-center justify-between bg-gradient-to-r from-blue-500 to-purple-500 p-4 fixed w-full z-10">
+        <button id="toggleSidebar" class="top-bar">
+            <i class="fas fa-bars"> menu </i>
+        </button>
+        <div class="flex space-x-4">
+            <a href="#" class="top-button text-white font-bold py-2 px-4">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="#" class="top-button text-white font-bold py-2 px-4">
+                <i class="fas fa-user"></i> Profile
+            </a>
+            <a href="#" class="top-button text-white font-bold py-2 px-4">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+        </div>
+        <div class="flex space-x-4">
+            <a href="#" class="top-button text-white font-bold py-2 px-4">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+            <a href="#" class="top-button text-white font-bold py-2 px-4">
+                <i class="fas fa-bell"></i> Notifications
+            </a>
+        </div>
+    </div>
+</div>
+
+    <!-- Sidebar -->
+<div class="sidebar bg-gradient-to-b from-gray-900 to-gray-800 text-white" id="sidebar">
+    <div class="p-4 border-b border-gray-700">
+        
+        <h2 class="text-2xl font-bold">Categories</h2>
+    </div>
+    <nav class="mt-4">
+        <div class="category mb-4">
+            <button class="flex items-center justify-between w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors duration-200">
+                <span class="flex items-center">
+                    <i class="fas fa-palette mr-2"></i>
+                    Design
+                </span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="sub-category ml-4 mt-2 hidden">
+                <a href="\stackup-js-intermediate-bounty-main\index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200">
+                    <i class="fas fa-edit mr-2"></i>
+                    Content Editor
+                </a>
+                <a href="\canvas-art-main\index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200">
+                    <i class="fas fa-paint-brush mr-2"></i>
+                    Canvas
+                </a>
+            </div>
+        </div>
+        <div class="category mb-4">
+            <button class="flex items-center justify-between w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors duration-200">
+                <span class="flex items-center">
+                    <i class="fas fa-gamepad mr-2"></i>
+                    Game
+                </span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="sub-category ml-4 mt-2 hidden">
+                <a href="\alien-pet-simulator-main\index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200">
+                    <i class="fas fa-trophy mr-2"></i>
+                    Alien
+                </a>
+            </div>
+        </div>
+        <div class="category mb-4">
+            <button class="flex items-center justify-between w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors duration-200">
+                <span class="flex items-center">
+                    <i class="fas fa-university mr-2"></i>
+                    Bank
+                </span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="sub-category ml-6 mt-2 hidden">
+                <a href="\bank-management-app-main\index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200">
+                    <i class="fas fa-money-bill-wave mr-2"></i>
+                    Transactions
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    
+</div>
+
+    
+    <!-- Content -->
+<div class="content" id="content">
+    <div class="container mx-auto px-4 py-16">
+        <h1 class="text-5xl font-bold text-center mb-12">Welcome to Our Futuristic Activity Hub!</h1>
+        <p class="text-xl text-center mb-16">Explore, create, and have fun in our innovative digital world. Discover new experiences, unleash your creativity, and connect with others. Get ready to embark on an unforgettable journey!</p>
+
+        <!-- Digital Canvas Section -->
+        <div id="digital-canvas"class="mb-24">
+            <h2 class="text-4xl font-bold mb-8">Digital Canvas</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="https://placehold.co/400x400" alt="Digital Canvas" class="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8">
+                <div>
+                    <p class="text-xl mb-4">Unleash your creativity and bring your ideas to life!</p>
+                    <p class="text-xl mb-4">Experience the future of digital art with our cutting-edge tools and features.</p>
+                    <p class="text-xl mb-4">With our advanced brush engine, you can create stunning artwork with ease. Explore a vast library of brushes, textures, and effects to take your art to the next level.</p>
+                    <p class="text-xl mb-4">Collaborate with other artists in real-time, and share your creations with the world.</p>
+                    <p class="text-xl">Discover the latest trends and techniques in digital art, and get inspired by our community of talented artists.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Neon Arena Section -->
+        <div id="neon-arena" class="mb-24">
+            <h2 class="text-4xl font-bold mb-8">Neon Arena</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <img src="https://placehold.co/400x400" alt="Neon Arena" class="w-full md:w-1/2 mb-8 md:mb-0 md:ml-8">
+                <div>
+                    <p class="text-xl mb-4">Step into the world of immersive gaming and compete with others!</p>
+                    <p class="text-xl mb-4">Explore a vast library of games, from action-packed adventures to strategic puzzles.</p>
+                    <p class="text-xl mb-4">Compete in tournaments, earn rewards, and climb the leaderboards to become the ultimate gaming champion.</p>
+                    <p class="text-xl mb-4">Join a community of gamers, share tips and strategies, and stay up-to-date with the latest gaming news.</p>
+                    <p class="text-xl">Get ready to experience the thrill of competition and the rush of adrenaline in our state-of-the-art gaming arena.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quantum Vault Section -->
+        <div id="quantum-vault" class="mb-24">
+            <h2 class="text-4xl font-bold mb-8">Quantum Vault</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="https://placehold.co/400x400" alt="Quantum Vault" class="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8">
+                <div>
+                    <p class="text-xl mb-4">Manage your finances, track expenses, and secure your assets!</p>
+                    <p class="text-xl mb-4">Experience the future of banking with our advanced security features and intuitive interface.</p>
+                    <p class="text-xl mb-4">Track your expenses, create budgets, and set financial goals with our personalized financial planning tools.</p>
+                     <p class="text-xl mb-4">Secure your assets with our state-of-the-art encryption and two-factor authentication.</p>
+                    <p class="text-xl">Stay on top of your finances with our real-time updates and notifications, and make informed decisions with our expert analysis.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Virtual Reality Experiences Section -->
+        <div id="vr-experiences" class="mb-24">
+            <h2 class="text-4xl font-bold mb-8">Virtual Reality Experiences</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <img src="https://placehold.co/400x400" alt="Virtual Reality Experiences" class="w-full md:w-1/2 mb-8 md:mb-0 md:ml-8">
+                <div>
+                    <p class="text-xl mb-4">Immerse yourself in breathtaking virtual reality experiences!</p>
+                    <p class="text-xl mb-4">Explore exotic destinations, play interactive games, and enjoy stunning visuals.</p>
+                    <p class="text-xl mb-4">Experience the thrill of skydiving, explore the depths of the ocean, or visit distant planets.</p>
+                    <p class="text-xl mb-4">Share your VR experiences with friends and family, and discover new worlds together.</p>
+                    <p class="text-xl">Get ready to be amazed by the limitless possibilities of virtual reality!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI-Powered Chatbots Section -->
+        <div id="ai-chatbots" class="mb-24">
+            <h2 class="text-4xl font-bold mb-8">AI-Powered Chatbots</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="https://placehold.co/400x400" alt="AI-Powered Chatbots" class="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8">
+                <div>
+                    <p class="text-xl mb-4">Interact with intelligent chatbots and get personalized assistance!</p>
+                    <p class="text-xl mb-4">Get answers to your questions, receive personalized recommendations, and enjoy seamless conversations.</p>
+                    <p class="text-xl mb-4">Chat with our AI-powered assistants to book flights, make reservations, or get help with everyday tasks.</p>
+                    <p class="text-xl mb-4">Experience the future of customer service with our advanced chatbot technology.</p>
+                    <p class="text-xl">Discover the convenience and efficiency of AI-powered chatbots, and take your productivity to the next level!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">About Us</h3>
+                        <p>Futuristic Activity Hub is your gateway to innovative experiences in gaming, art, and finance. Explore, create, and connect in our cutting-edge digital world.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                        <ul>
+                            <li><a href="#content" class="hover:text-gray-300">Home</a></li>
+                            <li><a href="#digital-canvas" class="hover:text-gray-300">Digital Canvas</a></li>
+                            <li><a href="#neon-arena" class="hover:text-gray-300">Neon Arena</a></li>
+                            <li><a href="#quantum-vault" class="hover:text-gray-300">Quantum Vault</a></li>
+                            <li><a href="#vr-experiences" class="hover:text-gray-300">VR Experiences</a></li>
+                            <li><a href="#ai-chatbots" class="hover:text-gray-300">AI Chatbots</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                        <p>Email: info@futuristicactivityhub.com</p>
+                        <p>Phone: +1 (555) 123-4567</p>
+                        <p>Address: 123 Future Street, Tech City, TC 12345</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-2xl hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-2xl hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <p>&copy; 2023 Futuristic Activity Hub. All rights reserved.</p>
+                    <p class="mt-2">
+                        <a href="#" class="hover:text-gray-300">Privacy Policy</a> | 
+                        <a href="#" class="hover:text-gray-300">Terms of Service</a> | 
+                        <a href="#" class="hover:text-gray-300">Cookie Policy</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

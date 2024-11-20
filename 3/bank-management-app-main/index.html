@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Management</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo-con">
+            <span>BankFree</span>
+        </div>
+        
+        <nav class="navbar">
+            <i class="fas fa-times close" style="color: #000000;"></i>
+            <ul>
+                <li><a href=""><i class="fas fa-user"></i></a></li>
+                <li><a href="Login.html " target="_blank">Logout</a></li>
+            </ul>
+        
+        </nav>
+        <div class="right-div">
+            <div class="outer-link"><a href="Login.html " target="_blank">Logout</a></div>
+            <div class="user-con"><i class="fas fa-user user"></i></div>
+        </div>
+        
+    </header>
+    <section class="container">
+        <h1>Welcome, <span class="user-name"></span></h1>
+
+        <div class="account">
+            <p>YOUR BALANCE</p>
+            <div class="balance-con">
+                <span id="balance">$0.00</span>
+                <i class="fas fa-eye-slash"></i>
+            </div>   
+        </div>
+
+        <form class="deposit-input-con">
+            <div class="close-input-con">
+                <i class="fas fa-times close-input-d" style="color: #000000;"></i>
+            </div>
+            <div class="deposit-input">
+            </div>
+            <input type="number" id="deposit-amount" placeholder="Deposit amount" onkeyup="onChangeSubmit()">
+            <button class="action-btn" type="submit">Confirm</button>
+        </form>
+        <form class="withdraw-input-con">
+            <div class="close-input-con">
+                <i class="fas fa-times close-input-w" style="color: #000000;"></i>
+            </div>
+            <div class="withdraw-input">
+            </div>
+            <input type="number" id="withdraw-amount" placeholder="withdraw amount" onkeyup="onChangeSubmit()">
+            <button class="action-btn" type="submit">Confirm</button>
+        </form>
+
+        <div class="actions">
+
+            <button id="deposit" onclick="handleDeposit()">Deposit</button>
+            <button id="withdraw" onclick="handleWidthraw()">Withdraw</button>
+            <button id="check-balance" onclick="handlebalanceCheck()">Check Balance</button>
+        </div>
+        <div class="history">
+            <div class="card">
+
+                <div class="icon-con">
+                    <div class="icon">D</div>
+                    <div class="type-of-action">
+                        <span class="action-message">Successfuly deposited</span>
+                        <span class="action-date">20-10-2023</span>
+                    </div>
+                </div>
+
+                <span class="action-amount">-2000</span>
+               
+            </div>
+            <div class="card">
+
+                <div class="icon-con">
+                    <div class="icon">D</div>
+                    <div class="type-of-action">
+                        <span class="action-message">Successfuly deposited</span>
+                        <span class="action-date">20-10-2023</span>
+                    </div>
+                </div>
+
+                <span class="action-amount">-2000</span>
+               
+            </div>
+            <div class="card">
+
+                <div class="icon-con">
+                    <div class="icon">D</div>
+                    <div class="type-of-action">
+                        <span class="action-message">Successfuly deposited</span>
+                        <span class="action-date">20-10-2023</span>
+                    </div>
+                </div>
+
+                <span class="action-amount">-2000</span>
+               
+            </div>
+        </div>
+        <div id="result-message-con">
+            <p id="result-message"></p>
+        </div>
+        <div id="blur">
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
