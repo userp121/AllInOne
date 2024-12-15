@@ -1,0 +1,106 @@
+
+body, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; 
+}
+
+header {
+  border-top-left-radius : 20px;
+  border-bottom-left-radius : 20px;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.container {
+  max-width: 180vh; 
+  max-height: 80vh; 
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin: 0px; 
+  overflow: auto; 
+}
+
+/* Button styles */
+button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 15px;
+  transition: background-color 0.3s ease-in-out;
+  border: 2px solid #e44d4d;
+}
+
+button.active {
+  background-color: #ff4f4f;
+}
+
+button:hover {
+  background-color: #e44d4d;
+}
+
+/* Label and input styles */
+label {
+  font-size: 16px;
+}
+
+input[type="color"],
+input[type="range"],
+select {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 15px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ccc;
+}
+/* Update the CSS for brush size input and icon */
+input[type="range"] {
+  vertical-align: middle; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 15px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ccc;
+}
+
+label[for="brushSize"] {
+  vertical-align: middle; 
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+
+/* Canvas styles */
+canvas {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
