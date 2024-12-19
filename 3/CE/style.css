@@ -1,8 +1,0 @@
-@media print {
-	.no-print {
-	   display: none !important;
-	}
-}
-body{
-	background-color: rgb(223, 245, 225);
-}
