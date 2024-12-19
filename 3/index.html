@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Activity Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+     <!-- Top Bar -->
+     <div class="top-bar">
+         <div class="flex items-center justify-between bg-gradient-to-r from-green-400 to-blue-500 p-4 fixed w-full z-10"> 
+            <button id="toggleSidebar" class="top-bar"> 
+                <i class="fas fa-bars"></i> Menu </button> 
+                <div class="nav__logo">
+                    <a href="#"><img src="image/logo.png" alt="logo" /></a>
+                  </div>
+             <div class="position-relative mx-auto" style="width: 400px;"> 
+                <form action="#" method="GET"> 
+                    <div class="search-wrapper d-flex align-items-center shadow p-2 rounded-pill bg-opacity-50 bg-light">
+                     <input type="text" placeholder="Search for anything..." class="flex-1 search-input" id="searchInput" autocomplete="off" /> 
+                     <button type="button" class="voice-search" id="voiceSearch"> 
+                        <i class="fas fa-microphone"></i> 
+                    </button> 
+                    <button type="button" class="search-button"> 
+                        <i class="fas fa-search"></i> 
+                    </button> 
+                </div> 
+                <ul class="suggestions" id="suggestionsList"></ul> 
+            </form> 
+        </div>
+      <div class="top_nav">
+        <div class="relative">
+          <button class="link">
+            <p>Money</p>
+          </button>
+          <div class="dropdown-menu">
+            <a href="BM/index.html">Transactions</a>
+            <a href="crypto/crypto.html">Crypto</a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <button class="link">
+            <p>Fitness</p>
+          </button>
+          <div class="dropdown-menu">
+            <a href="gym/index.html">Gym</a>
+            <a href="energy/EnergyDrinks/index.html">Energy Drinks</a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <button class="link">
+            <p>Music</p>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+     </div>
+
+<div class="sidebar bg-gradient-to-b from-gray-900 to-gray-800 text-white" id="sidebar">
+    <div class="p-4 border-b border-gray-700">
+        
+        <h2 class="text-2xl font-bold">Categories</h2>
+    </div>
+    <nav class="mt-4">
+        <div class="category mb-4">
+            <button class="flex items-center justify-between w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors duration-200" >
+                <span class="flex items-center">
+                    <i class="fas fa-palette mr-2"></i>
+                    Design
+                </span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="sub-category ml-4 mt-2 hidden">
+                <a href="CE/index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200" target="_blank">
+                    <i class="fas fa-edit mr-2"></i>
+                    Content Editor
+                </a>
+                <a href="C\index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200" target="_blank">
+                    <i class="fas fa-paint-brush mr-2"></i>
+                    Canvas
+                </a>
+            </div>
+        </div>
+        <div class="category mb-4">
+            <button class="flex items-center justify-between w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors duration-200">
+                <span class="flex items-center">
+                    <i class="fas fa-gamepad mr-2"></i>
+                    Game
+                </span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="sub-category ml-4 mt-2 hidden">
+                <a href="AP/index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200" target="_blank">
+                    <i class="fas fa-trophy mr-2"></i>
+                    Alien
+                </a>
+                <a href="word/word.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200" target="_blank">
+                    <i class="fas fa-pencil-alt mr-2"></i>
+                    Word
+                </a>
+            </div>
+        </div>
+        <div class="category mb-4">
+            <button class="flex items-center justify-between w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors duration-200">
+                <span class="flex items-center">
+                    <i class="fas fa-university mr-2"></i>
+                    Bank
+                </span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="sub-category ml-6 mt-2 hidden">
+                <a href="BM/Login.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200" target="_blank">
+                    <i class="fas fa-money-bill-wave mr-2"></i>
+                    Transactions
+                </a>
+                <a href="crypto/crypto.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200" target="_blank">
+                    <i class="fab fa-bitcoin mr-2"></i>
+                    Crypto
+                </a>
+                
+            </div>
+        </div>
+        <div class="category mb-4">
+            <button class="flex items-center justify-between w-full px-4 py-2 text-left hover:bg-gray-700 transition-colors duration-200">
+                <span class="flex items-center">
+                    <i class="fas fa-heartbeat mr-2"></i>
+                    Fitness 
+                </span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="sub-category ml-6 mt-2 hidden">
+                <a href="gym/index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200" target="_blank">
+                    <i class="fas fa-dumbbell mr-2"></i>
+                    Gym
+                </a>
+                <a href="energy/EnergyDrinks/index.html" class="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-200" target="_blank">
+                    <i class="fas fa-bolt mr-2"></i>
+                    Energy Drink
+                </a>
+        </div>
+    </nav> 
+</div>
+
+<div class="content" id="content">
+    <div class="container mx-auto px-4 py-16">
+        <h1 class="text-5xl font-bold text-center mb-12">Welcome to Our Futuristic Activity Hub!</h1>
+        <p class="text-xl text-center mb-16">Explore, create, and have fun in our innovative digital world. Discover new experiences, unleash your creativity, and connect with others. Get ready to embark on an unforgettable journey!</p>
+        <div id="digital-canvas" class="mb-24 transition-transform duration-300 hover:bg-black rounded-lg p-4">
+            <a href="https://www.canva.com" target="_blank">
+            <h2 class="text-4xl font-bold mb-8">Digital Canvas</h2>
+            
+            <div class="flex flex-col md:flex-row items-center">                  
+                    <img src="image/digital.jpg" alt="Digital Canvas" class="w-full md:w-full mb-8 md:mb-0 md:mr-10 transition-transform duration-300 hover:scale-105">
+            </a>
+                    <div>
+                    <p class="text-xl ml-4 mb-4">Unleash your creativity and bring your ideas to life!</p>
+                    <p class="text-xl ml-4 mb-4">Experience the future of digital art with our cutting-edge tools and features.</p>
+                    <p class="text-xl ml-4 mb-4">With our advanced brush engine, you can create stunning artwork with ease. Explore a vast library of brushes, textures, and effects to take your art to the next level.</p>
+                    <p class="text-xl ml-4 mb-4">Collaborate with other artists in real-time, and share your creations with the world.</p>
+                    <p class="text-xl ml-4">Discover the latest trends and techniques in digital art, and get inspired by our community of talented artists.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="neon-arena" class="mb-24 transition-transform duration-300 hover:bg-black rounded-lg p-4">
+            <a href="https://www.fanatical.com/en/game/neon-arena" target="_blank">
+            <h2 class="text-4xl font-bold mb-8">Neon Arena</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                <img src="image/neon.jpg" alt="Neon Arena" class="w-full md:w-full mb-8 md:mb-0 md:ml-2 transition-transform duration-300 hover:scale-105">
+            </a>  
+                <div>
+                    <p class="text-xl mb-4">Step into the world of immersive gaming and compete with others!</p>
+                    <p class="text-xl mb-4">Explore a vast library of games, from action-packed adventures to strategic puzzles.</p>
+                    <p class="text-xl mb-4">Compete in tournaments, earn rewards, and climb the leaderboards to become the ultimate gaming champion.</p>
+                    <p class="text-xl mb-4">Join a community of gamers, share tips and strategies, and stay up-to-date with the latest gaming news.</p>
+                    <p class="text-xl">Get ready to experience the thrill of competition and the rush of adrenaline in our state-of-the-art gaming arena.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="quantum-vault" class="mb-24 transition-transform duration-300 hover:bg-black rounded-lg p-4">
+            <a href="https://quantum-vault.org/" target="_blank">
+            <h2 class="text-4xl font-bold mb-8">Quantum Vault</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="image/quantum.jpg" alt="Quantum Vault" class="w-full md:w mb-8 md:mb-0 md:mr-4 transition-transform duration-300 hover:scale-105">
+                </a>
+                <div>
+                    <p class="text-xl mb-4 ml-4">Manage your finances, track expenses, and secure your assets!</p>
+                    <p class="text-xl mb-4 ml-4">Experience the future of banking with our advanced security features and intuitive interface.</p>
+                    <p class="text-xl mb-4 ml-4">Track your expenses, create budgets, and set financial goals with our personalized financial planning tools.</p>
+                    <p class="text-xl mb-4 ml-4">Secure your assets with our state-of -the-art encryption and two-factor authentication.</p>
+                    <p class="text-xl ml-4">Stay on top of your finances with our real-time updates and notifications, and make informed decisions with our expert analysis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="vr-experiences" class="mb-24 transition-transform duration-300 hover:bg-black rounded-lg p-4">
+            <a href="https://www.travelmag.com/articles/virtual-reality-travel-experiences/" target="_blank">
+            <h2 class="text-4xl font-bold mb-8">Virtual Reality Experiences</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center">
+                    <img src="image/vr.jpg" alt="Quantum Vault" class="w-full md:w mb-8 md:mb-0 md:mr-8 transition-transform duration-300 hover:scale-105">
+                    </a>
+                <div>
+                    <p class="text-xl mb-4">Immerse yourself in breathtaking virtual reality experiences!</p>
+                    <p class="text-xl mb-4">Explore exotic destinations, play interactive games, and enjoy stunning visuals.</p>
+                    <p class="text-xl mb-4">Experience the thrill of skydiving, explore the depths of the ocean, or visit distant planets.</p>
+                    <p class="text-xl mb-4">Share your VR experiences with friends and family, and discover new worlds together.</p>
+                    <p class="text-xl">Get ready to be amazed by the limitless possibilities of virtual reality!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ai-chatbots" class="mb-24 transition-transform duration-300 hover:bg-black rounded-lg p-4">
+            <a href="https://www.blackbox.ai/" target="_blank">
+            <h2 class="text-4xl font-bold mb-8">AI-Powered Chatbots</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="image/chat.png" alt="AI-Powered Chatbots" class="w-full md:w mb-8 md:mb-0 md:mr-8 transition-transform duration-300 hover:scale-105">
+            </a>
+                <div>
+                    <p class="text-xl mb-4 ml-4">Interact with intelligent chatbots and get personalized assistance!</p>
+                    <p class="text-xl mb-4 ml-4">Get answers to your questions, receive personalized recommendations, and enjoy seamless conversations.</p>
+                    <p class="text-xl mb-4 ml-4">Chat with our AI-powered assistants to book flights, make reservations, or get help with everyday tasks.</p>
+                    <p class="text-xl mb-4 ml-4">Experience the future of customer service with our advanced chatbot technology.</p>
+                    <p class="text-xl ml-4">Discover the convenience and efficiency of AI-powered chatbots, and take your productivity to the next level!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+ <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">About Us</h3>
+                        <p>Futuristic Activity Hub is your gateway to innovative experiences in gaming, art, and finance. Explore, create, and connect in our cutting-edge digital world.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                        <ul>
+                            <li><a href="#content" class="hover:text-gray-300">Home</a></li>
+                            <li><a href="#digital-canvas" class="hover:text-gray-300">Digital Canvas</a></li>
+                            <li><a href="#neon-arena" class="hover:text-gray-300">Neon Arena</a></li>
+                            <li><a href="#quantum-vault" class="hover:text-gray-300">Quantum Vault</a></li>
+                            <li><a href="#vr-experiences" class="hover:text-gray-300">VR Experiences</a></li>
+                            <li><a href="#ai-chatbots" class="hover:text-gray-300">AI Chatbots</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                        <p>Email: xyz@gmail.com</p>
+                        <p>Phone: +91 8891234567</p>
+                        <p>Address: 123 Future Street, Banglore City, BC 12345</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-2xl hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-2xl hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-2xl hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <div id="google_translate_element"></div>
+                    <p class="mt-2">
+                        <a href="extra/pp.html" class="hover:text-gray-300">Privacy Policy</a> | 
+                        <a href="extra/tos.html" class="hover:text-gray-300">Terms of Service</a> | 
+                        <a href="extra/cp.html" class="hover:text-gray-300">Cookie Policy</a>
+                    </p>
+                </div>
+            </div>
+            <div class="fot">
+            <p>&copy; 2024 Futuristic Activity Hub. All rights reserved.</p>
+            </div>
+        </footer>
+
+    <script src="script.js"></script>
+    <script src="voice.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:rgb(185, 224, 185);
+        }
+        .container {
+            background-color:lightcoral ;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="e.g. 50" required>
+
+        <label for="height">Height:</label>
+        <input type="text" id="height" placeholder="e.g. 5'11 or 180cm" required>
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const heightInput = document.getElementById('height').value.trim();
+
+            if (!weight || weight <= 0) {
+                document.getElementById('result').innerText = "Please enter a valid weight.";
+                return;
+            }
+
+            let heightInCm = 0;
+
+            if (heightInput.includes("'")) {
+                // Handle feet and inches format (e.g., 5'11)
+                const parts = heightInput.split("'");
+                if (parts.length !== 2) {
+                    document.getElementById('result').innerText = "Please enter height in the format 5'11.";
+                    return;
+                }
+
+                const feet = parseInt(parts[0].trim(), 10);
+                const inches = parseInt(parts[1].replace("\"", "").trim(), 10) || 0;
+
+                if (isNaN(feet) || isNaN(inches) || feet < 0 || inches < 0 || inches >= 12) {
+                    document.getElementById('result').innerText = "Please enter a valid height in feet and inches.";
+                    return;
+                }
+
+                heightInCm = (feet * 30.48) + (inches * 2.54);
+            } else if (heightInput.toLowerCase().endsWith("cm")) {
+                // Handle centimeters format (e.g., 180cm)
+                const heightCm = parseFloat(heightInput.replace("cm", "").trim());
+                if (!heightCm || heightCm <= 0) {
+                    document.getElementById('result').innerText = "Please enter a valid height in centimeters.";
+                    return;
+                }
+                heightInCm = heightCm;
+            } else {
+                document.getElementById('result').innerText = "Please enter height in the format 5'11 or 180cm.";
+                return;
+            }
+
+            const heightM = heightInCm / 100;
+            const bmi = (weight / (heightM * heightM)).toFixed(2);
+
+            let category = "";
+            if (bmi < 18.5) {
+                category = "Underweight";
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                category = "Normal weight";
+            } else if (bmi >= 25 && bmi <= 29.9) {
+                category = "Overweight";
+            } else {
+                category = "Obesity";
+            }
+
+            document.getElementById('result').innerText = `Your BMI is ${bmi} (${category}).`;
+        }
+    </script>
+</body>
+</html>
